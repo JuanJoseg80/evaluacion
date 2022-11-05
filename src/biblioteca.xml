@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type ="text/xsl" href="biblioteca.xsl"?>
+<!DOCTYPE biblioteca>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="biblioteca.xsd">
+
+
+    <libro categoria="ficcion" enstock="true" CP="ESP">
+        <titulo>Los hombres que no amaban a las mujeres</titulo>
+        <autor id= "10014562" ciudad ="berlin"   pais ="alemania" telefono ="1235" correo ="sjdnhs@mail" >
+            <nombre>marcos</nombre>
+            <apellido>salmanca</apellido>
+
+        </autor>
+        <fecha>
+            <anyo>2020</anyo>
+        </fecha>
+        <editor>Destino</editor>
+        <precio> 2232</precio>
+    </libro>
+
+    <libro categoria="noficcion"  CP="ESP">
+        <titulo>Java a través de ejemplos</titulo>
+        <autor  id ="10016564"  ciudad ="medellin"   pais ="col" telefono ="54656" correo ="skasjs@mail"  >
+            <nombre>kiki</nombre>
+
+            <apellido>gutierrez</apellido>
+        </autor>
+        <fecha>
+
+            <anyo>2003</anyo>
+        </fecha>
+        <editor>Ra-Ma</editor>
+        <precio> 2232</precio>
+    </libro>
+
+
+
+
+
+
+</biblioteca>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name = "biblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "libro"  maxOccurs="unbounded" minOccurs="0" >
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="titulo" maxOccurs="unbounded" type="xs:string"/>
+
+
+                            <xs:element name="autor" maxOccurs="unbounded"   >
+                                <xs:complexType >
+
+
+                                    <xs:sequence>
+                                        <xs:element name="nombre"  maxOccurs="unbounded" type="xs:string"/>
+
+                                        <xs:element name="apellido" maxOccurs="unbounded" type="xs:string">
+                                            <xs:simpleType >
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="([a-z])+"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+
+
+
+
+                                    </xs:sequence>
+
+
+
+
+
+                                    <xs:attribute type="xs:positiveInteger" name="id" />
+                                    <xs:attribute type="xs:string" name="ciudad"/>
+                                    <xs:attribute type="xs:string" name="pais"/>
+                                    <xs:attribute type="xs:positiveInteger" name="telefono"/>
+                                    <xs:attribute type="xs:string" name="correo"/>
+
+
+
+                                </xs:complexType >
+
+
+
+
+
+
+
+
+
+                            </xs:element>
+
+
+
+
+                            <xs:element name="fecha" maxOccurs="unbounded" >
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <xs:element name="anyo">
+                                            <xs:simpleType >
+                                                <xs:restriction base="xs:positiveInteger">
+                                                    <xs:minInclusive value="1990"/>
+                                                    <xs:maxInclusive value="2020"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+
+                                    </xs:sequence>
+
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="editor" maxOccurs="unbounded" type="xs:string"/>
+                            <xs:element name="precio" maxOccurs="unbounded" type="xs:integer"/>
+
+
+
+
+
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="categoria" />
+                        <xs:attribute type="xs:string" name="enstock"/>
+                        <xs:attribute type="xs:string" name="CP"  />
+                    </xs:complexType>
+
+
+                </xs:element>
+            </xs:sequence>
+
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

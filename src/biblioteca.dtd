@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE biblioteca>
+
+        <!ELEMENT biblioteca (libro)*>
+        <!ELEMENT libro (titulo, autor+, fecha, editor,precio)>
+        <!ATTLIST libro
+                categoria (autobiografia | noficcion | ficcion) #REQUIRED
+                enstock (true | false) "false"
+                CP (ESP | FRA | ITA | ALE) #REQUIRED
+               >
+        <!ELEMENT titulo (#PCDATA)>
+
+        <!ELEMENT autor ( nombre, apellido)*>
+        <!ATTLIST autor
+                ciudad CDATA #IMPLIED
+                correo CDATA #IMPLIED
+                id ID  #REQUIRED
+                pais CDATA #IMPLIED
+                telefono CDATA #IMPLIED>
+
+
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellido (#PCDATA)>
+
+
+        <!ELEMENT fecha (anyo)>
+        <!ELEMENT editor (#PCDATA)>
+        <!ELEMENT precio (#PCDATA)>
+        <!ELEMENT anyo (#PCDATA)>
